@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="username" class="username">
+    <script>
+        var k = document.getElementById("username");
+        k.onkeydown = function() {
+            console.log("谁让你按了小子");
+        }
+        k.onkeyup = function() {
+            console.log("谁让你松开了小子");
+        }
+        k.onkeypress = function() {
+                console.lod("谁让你不松手了孩子");
+            }
+            //这里的事件里面有一个e.targrt.value,就是输入框里数据
+    </script>
+</body>
+
+</html>
+<!-- keycode是为唯一标识，其中的event.keycode是你当前按下的键位的编码 -->

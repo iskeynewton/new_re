@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .root {
+            width: 200px;
+            height: 100px;
+            background-color: #999;
+        }
+        
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="root" id="root">
+        <div class="box" id="box">我是个盒子</div>
+    </div>
+    <script>
+        var root = document.getElementById("root");
+        var box = document.getElementById("box");
+        box.onclick = function() {
+            console.log("你触发了box事件");
+            e.stopPropagation(); //这行代码阻止事件冒泡，这样就可以，防止box事件会连带着触发root事件
+        }
+        root.onclick = function(e) {
+
+            console.log("你触发了root事件");
+        }
+    </script>
+</body>
+
+</html>

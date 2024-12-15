@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="nav">导航</div>
+    <script>
+        var text = document.createElement("p");
+        var content = document.createTextNode("我是文本");
+
+        console.log(content);
+        text.appendChild(content);
+        console.log(text);
+    </script>
+</body>
+
+</html>
+<!-- 你还可以向这样增加标签属性，通过var id=document.createAtrribute（我是个属性）
+创建一个对象。
+然后可以通过id.value来进行赋值
+然后你可以通过标签对象来对标签进行属性设置
+就像这样
+text.setAtrributeNode(); -->

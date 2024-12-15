@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="clickhandle()" id="btn">我是一个按钮</button>
+    <script>
+        function clickhandle() {
+            console.log("哇塞你点击了按钮哎孩子");
+        }
+        //或者你可以创建一个节点的对象btn（例子），然后通过btn.Onclick来进行操作
+        //刚才说的这个方式叫做dom0级事件，优点是html和js分离
+        //但是缺点是不能同是添加多个事件
+        var btn = document.getElementById("btn");
+        btn.onclick = function cl() {
+            console.log("事件一");
+        }
+        var btn = document.getElementById("btn");
+        btn.onclick = function cl() {
+                console.log("事件二");
+            }
+            //这个时候事件二就把事件给覆盖了孩子们
+
+        //下面是dom2级的事件
+        btn.addEventListener("click", function() {
+            console.log("这是第一个二级事件");
+        })
+        btn.addEventListener("click", function() {
+            console.log("这是第二个二级事件");
+        })
+    </script>
+</body>
+
+</html>

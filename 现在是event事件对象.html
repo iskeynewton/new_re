@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">我是一个按钮</button>
+    <br>
+    <a href="https://itbaizhan.com" id="bq">我是一个标签</a>
+    <script>
+        var btn = document.getElementById("btn");
+        btn.onclick = function(event) {
+            console.log(event.target)
+        }
+        var bt = document.getElementById("bq");
+        bt.onclick = function(event) {
+            console.log("你点击了标签");
+            event.preventDefault(); //阻止标签跳转的默认行为的函数，event是点击事件的对象
+            event.target.innerHTML = "点击了之后";
+        }
+    </script>
+</body>
+
+</html>

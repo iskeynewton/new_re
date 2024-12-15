@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>hello</div>
+    <div>hello2</div>
+    <script>
+        var a = document.getElementsByTagName("div")[1]; //返回的是一个列表
+        console.log(a);
+        a.innerHTML = "我是菜鸟，想寄就寄" //直接修改节点内容
+            //这个时候还有getElementByclassName()
+            //and 你可以用getElementById()
+    </script>
+</body>
+
+</html>

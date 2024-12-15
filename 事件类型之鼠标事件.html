@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠标事件</title>
+    <style>
+        #btn5 {
+            background-color: red;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn1">单机事件</button>
+    <button id="btn2">双击事件</button>
+    <button id="btn3">鼠标按下</button>
+    <button id="btn4">鼠标抬起</button>
+    <div id="btn5">鼠标移动</div>
+    <script>
+        var btn1 = document.getElementById("btn1");
+        var btn2 = document.getElementById("btn2");
+        var btn3 = document.getElementById("btn3");
+        var btn4 = document.getElementById("btn4");
+        var btn5 = document.getElementById("btn5");
+        btn1.onclick = function() {
+            console.log("你触发了一个click事件");
+        }
+        btn2.ondblclick = function() {
+            console.log("你触发了一个双击事件");
+        }
+        btn3.onmousedown = function() {
+            console.log("你触发了一个落下鼠标的事件");
+        }
+        btn4.onmouseup = function() {
+            console.log("鼠标松开");
+        }
+        btn5.onmousemove = function() {
+            console.log("鼠标正在移动");
+        }
+        btn5.onmouseenter = function() {
+                console.log("鼠标进入了");
+            }
+            //wheel是鼠标滚轮事件，然后还有就是onmouseover和onmouseleave和mouseout
+    </script>
+</body>
+
+</html>
+<!-- 然后现在和大家说一下mouseenter/leave和mousecover/out的区别，其实也就是后者有子父级的关系，就是说当鼠标进入父级元素的子元素也会出触发进入事件. -->

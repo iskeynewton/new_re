@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3 {
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>哈哈</h3>
+    <h3>哈哈</h3>
+    <h3>哈哈</h3>
+    <script>
+        // window.onscroll = function() {
+        //     console.log("页面在滚动");
+        //     console.log(document.documentElement.scrollTop)
+        // }这是一个很高频的函数执行，现在我们要开始防抖了
+        function debounce(fn, delay) {
+            var timer = null;
+            return function() {
+                if (null) {
+                    clearTimeout(timer);
+                }
+                timer = setTimeout(fn, delay);
+            }
+
+        }
+
+        window.onscroll = debounce(scrollhandle, 200);
+
+        function scrollhandle() {
+            var scrollTop = document.documentElement.scrollTop;
+            console.log(scrollTop);
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- 页面滚动事件的对象：window.scroll -->
+<!-- 防抖的函数debouch   -->
+<!-- 防抖就是将短时间内某一个和函数的频率变低 -->

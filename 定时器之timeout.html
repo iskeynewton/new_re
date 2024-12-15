@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <P>我是内容</P>
+    <script>
+        var name = "iwen";
+        var user = {
+            name: "审理磷化的gou",
+            getname: function() {
+                console.log(this.name);
+            }
+        }
+        setTimeout(user.getname(), 3000);
+    </script>
+</body>
+
+</html>
+<!-- this指针指向全局区域
+that指针指向当前变量 -->
+
+
+<!-- 假如这里有一个定时器的实例化的对象
+可以用clearTimeout来取消定时效果 -->

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 什么是事件代理：把子级元素的事件交给父级元素处理 -->
+    <ul id="list">
+        <li>列表1</li>
+        <li>列表2</li>
+        <p>我是一个对比</p>
+    </ul>
+    <script>
+        var list = document.getElementById("list");
+        list.addEventListener("click", function(e) {
+            if (event.target.tagName === "LI") {
+                console.log("你点击了li标签的内容");
+                console.log(e.target.innerHTML);
+            }
+        })
+    </script>
+</body>
+
+</html>
+<!-- 字级元素的事件会向上冒泡到父级元素 -->
